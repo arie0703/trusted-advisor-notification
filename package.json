@@ -1,0 +1,22 @@
+{
+  "name": "trusted-advisor-function",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.114",
+    "@types/node": "^18.15.11",
+    "@types/request": "^2.48.8",
+    "esbuild": "^0.17.16",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@aws-sdk/client-support": "^3.345.0",
+    "@slack/webhook": "^6.1.0",
+    "aws-sdk": "^2.1390.0",
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js"
+  },
+  "license": "MIT"
+}
